@@ -3,10 +3,13 @@ package com.bitbyte.cargaraage.service;
 import com.bitbyte.cargaraage.enitities.BodyStylesEntity;
 import com.bitbyte.cargaraage.repository.BodyStylesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import javax.validation.constraints.NotNull;
 import java.util.Optional;
+
+import static org.springframework.data.domain.PageRequest.*;
 
 @Service
 public class BodyStyleService {
@@ -47,5 +50,9 @@ public class BodyStyleService {
         if(entity.isPresent())
             repository.delete(entity.get());
         return entity;
+    }
+
+    public Page<BodyStylesEntity> getPageableBodyStyles(int pageNumber, int pageSize){
+        return repository.findAll(of(pageNumber,pageSize));
     }
 }
