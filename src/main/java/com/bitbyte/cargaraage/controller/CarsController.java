@@ -28,4 +28,9 @@ public class CarsController {
     public ResponseEntity<CarsEntity> saveCar(@RequestBody CarsEntity car){
         return new ResponseEntity<>(service.saveCar(car), HttpStatus.CREATED);
     }
+
+    @PutMapping("/cars")
+    public ResponseEntity<CarsEntity> updateCar(@RequestBody CarsEntity car) {
+        return  new ResponseEntity<>(service.updateCar(car), HttpStatus.OK);
+    }
 }
