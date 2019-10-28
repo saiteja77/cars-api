@@ -1,22 +1,20 @@
 package com.bitbyte.cargaraage.enitities;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
 public class Properties {
 
     private BodyStylesEntity bodyStyle;
     private MakesEntity make;
     private String fuelType;
     private FuelConsumption mileage;
-    private String fuelCapacity;
-    private String accelerationTime;
-    private String seatingCapacity;
-    private String horsePower;
-    private String torque;
+    private Integer fuelCapacity;
+    private Integer accelerationTime;
+    private Integer seatingCapacity;
+    private Integer horsePower;
+    private Integer torque;
     private String engineType;
-    private String year;
+    private Integer year;
 
-    public Properties(BodyStylesEntity bodyStyle, MakesEntity make, String fuelType, FuelConsumption mileage, String fuelCapacity, String accelerationTime, String seatingCapacity, String horsePower, String torque, String engineType) {
+    public Properties(BodyStylesEntity bodyStyle, MakesEntity make, String fuelType, FuelConsumption mileage, Integer fuelCapacity, Integer accelerationTime, Integer seatingCapacity, Integer horsePower, Integer torque, String engineType, Integer year) {
         this.bodyStyle = bodyStyle;
         this.make = make;
         this.fuelType = fuelType;
@@ -27,6 +25,7 @@ public class Properties {
         this.horsePower = horsePower;
         this.torque = torque;
         this.engineType = engineType;
+        this.year = year;
     }
 
     public BodyStylesEntity getBodyStyle() {
@@ -61,43 +60,43 @@ public class Properties {
         this.mileage = mileage;
     }
 
-    public String getFuelCapacity() {
+    public Integer getFuelCapacity() {
         return fuelCapacity;
     }
 
-    public void setFuelCapacity(String fuelCapacity) {
+    public void setFuelCapacity(Integer fuelCapacity) {
         this.fuelCapacity = fuelCapacity;
     }
 
-    public String getAccelerationTime() {
+    public Integer getAccelerationTime() {
         return accelerationTime;
     }
 
-    public void setAccelerationTime(String accelerationTime) {
+    public void setAccelerationTime(Integer accelerationTime) {
         this.accelerationTime = accelerationTime;
     }
 
-    public String getSeatingCapacity() {
+    public Integer getSeatingCapacity() {
         return seatingCapacity;
     }
 
-    public void setSeatingCapacity(String seatingCapacity) {
+    public void setSeatingCapacity(Integer seatingCapacity) {
         this.seatingCapacity = seatingCapacity;
     }
 
-    public String getHorsePower() {
+    public Integer getHorsePower() {
         return horsePower;
     }
 
-    public void setHorsePower(String horsePower) {
+    public void setHorsePower(Integer horsePower) {
         this.horsePower = horsePower;
     }
 
-    public String getTorque() {
+    public Integer getTorque() {
         return torque;
     }
 
-    public void setTorque(String torque) {
+    public void setTorque(Integer torque) {
         this.torque = torque;
     }
 
@@ -107,5 +106,13 @@ public class Properties {
 
     public void setEngineType(String engineType) {
         this.engineType = engineType;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
     }
 }

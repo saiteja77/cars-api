@@ -1,34 +1,34 @@
 package com.bitbyte.cargaraage.enitities;
 
 public class FuelConsumption {
-    private String city;
-    private String highway;
-    private String combined;
+    private Integer city;
+    private Integer highway;
+    private Integer combined;
 
     public FuelConsumption() {
     }
 
-    public String getCity() {
+    public Integer getCity() {
         return city;
     }
 
-    public void setCity(String city) {
+    public void setCity(Integer city) {
         this.city = city;
     }
 
-    public String getHighway() {
+    public Integer getHighway() {
         return highway;
     }
 
-    public void setHighway(String highway) {
+    public void setHighway(Integer highway) {
         this.highway = highway;
     }
 
-    public String getCombined() {
+    public Integer getCombined() {
         return combined;
     }
 
-    public void setCombined(String combined) {
+    public void setCombined(Integer combined) {
         this.combined = combined;
     }
 }

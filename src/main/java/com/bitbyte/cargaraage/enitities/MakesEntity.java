@@ -6,8 +6,6 @@ import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.annotation.Generated;
-
 @Document(collection = "makes")
 public class MakesEntity {
 
@@ -32,6 +30,10 @@ public class MakesEntity {
 
     public void setMakeName(String makeName) {
         this.makeName = makeName;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public MakesEntity() {
