@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @CrossOrigin
@@ -21,7 +22,11 @@ public class CarsController {
 
     @GetMapping("/cars/{id}")
     public ResponseEntity<CarsEntity> getCarsById(@PathVariable String id){
-        return new ResponseEntity<>(service.getCarsById(id), HttpStatus.OK);
+        CarsEntity car = service.getCarsById(id);
+        if( car != null)
+            return new ResponseEntity<>(car, HttpStatus.OK);
+        else
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
     }
 
     @PostMapping("/cars")

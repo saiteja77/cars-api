@@ -28,8 +28,8 @@ public class CarsService {
     }
 
     public CarsEntity getCarsById(String id) {
-        repository.findById(id);
-        return new CarsEntity();
+        Optional<CarsEntity> car = repository.findById(id);
+        return car.isPresent() ? car.get() : null;
     }
 
     public CarsEntity saveCar(CarsEntity car) {
