@@ -13,8 +13,12 @@ public class Properties {
     private Integer torque;
     private String engineType;
     private Integer year;
+    private String interiorColor;
+    private String exteriorColor;
+    private String transmission;
+    private String driveterrain;
 
-    public Properties(BodyStylesEntity bodyStyle, MakesEntity make, String fuelType, FuelConsumption mileage, Integer fuelCapacity, Integer accelerationTime, Integer seatingCapacity, Integer horsePower, Integer torque, String engineType, Integer year) {
+    public Properties(BodyStylesEntity bodyStyle, MakesEntity make, String fuelType, FuelConsumption mileage, Integer fuelCapacity, Integer accelerationTime, Integer seatingCapacity, Integer horsePower, Integer torque, String engineType, Integer year, String interiorColor, String exteriorColor, String transmission, String driveterrain) {
         this.bodyStyle = bodyStyle;
         this.make = make;
         this.fuelType = fuelType;
@@ -26,6 +30,10 @@ public class Properties {
         this.torque = torque;
         this.engineType = engineType;
         this.year = year;
+        this.interiorColor = interiorColor;
+        this.exteriorColor = exteriorColor;
+        this.transmission = transmission;
+        this.driveterrain = driveterrain;
     }
 
     public BodyStylesEntity getBodyStyle() {
@@ -114,5 +122,37 @@ public class Properties {
 
     public void setYear(Integer year) {
         this.year = year;
+    }
+
+    public String getInteriorColor() {
+        return interiorColor;
+    }
+
+    public void setInteriorColor(String interiorColor) {
+        this.interiorColor = interiorColor;
+    }
+
+    public String getExteriorColor() {
+        return exteriorColor;
+    }
+
+    public void setExteriorColor(String exteriorColor) {
+        this.exteriorColor = exteriorColor;
+    }
+
+    public String getTransmission() {
+        return transmission;
+    }
+
+    public void setTransmission(String transmission) {
+        this.transmission = transmission;
+    }
+
+    public String getDriveterrain() {
+        return driveterrain;
+    }
+
+    public void setDriveterrain(String driveterrain) {
+        this.driveterrain = driveterrain;
     }
 }
